@@ -1,0 +1,43 @@
+.article-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.article-image-container {
+    width: 100%;
+    max-height: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+}
+
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.article-text {
+    white-space: pre-line;
+    margin: 2rem 0;
+}
+
+/* Button styling */
+.btn {
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}

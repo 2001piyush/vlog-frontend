@@ -1,0 +1,41 @@
+/* Social icon base styles */
+.footer .social-icon {
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Instagram icon styles */
+.footer .social-icon .fa-instagram {
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.footer .social-icon:hover .fa-instagram,
+.footer .social-icon:active .fa-instagram,
+.footer .social-icon:focus .fa-instagram {
+  color: #E1306C !important;
+  transform: scale(1.1);
+}
+
+/* YouTube icon styles */
+.footer .social-icon .fa-youtube {
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.footer .social-icon:hover .fa-youtube,
+.footer .social-icon:active .fa-youtube,
+.footer .social-icon:focus .fa-youtube {
+  color: #FF0000 !important;
+  transform: scale(1.1);
+}
+
+/* Remove media queries and combine effects */
+.footer .social-icon:hover,
+.footer .social-icon:active,
+.footer .social-icon:focus {
+  opacity: 0.9;
+}

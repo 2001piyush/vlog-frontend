@@ -1,0 +1,65 @@
+.home-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.content-section {
+    padding: 2rem 0;
+}
+
+.section-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-divider {
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    margin: 0 auto 3rem auto;
+    border-radius: 2px;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.error-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 1rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Animation for loading spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Hover effect for content blocks */
+.content-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

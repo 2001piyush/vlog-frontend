@@ -1,0 +1,120 @@
+.navbar {
+    min-height: 80px;
+    background: linear-gradient(to right, #ffffff, #f8f9fa) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem 2rem;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #3498db !important;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #34495e !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .btn-link {
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Active link styling */
+.nav-link.active {
+    color: #3498db !important;
+}
+
+/* Mobile menu transition styling */
+.navbar-collapse {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mobile menu styling */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-top: 1rem;
+        transform-origin: top;
+        opacity: 1;
+    }
+
+    .navbar-collapse.collapsing {
+        height: auto;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-collapse.show {
+        opacity: 1;
+    }
+
+    .navbar-collapse:not(.show) {
+        display: block;
+        height: 0;
+        opacity: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+    }
+}
+
+/* Admin/Login button special styling */
+.navbar-nav .nav-item:last-child .nav-link {
+    background-color: #3498db;
+    color: white !important;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item:last-child .nav-link:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+/* Hamburger menu button styling */
+.navbar-toggler {
+    border: none !important;
+    padding: 0.5rem !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Hamburger icon styling */
+.navbar-toggler-icon {
+    width: 1.5em !important;
+    height: 1.5em !important;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-toggler:hover .navbar-toggler-icon {
+    transform: scale(1.1);
+}
+
+/* Active state */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg);
+}
