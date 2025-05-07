@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const API_URL = 'https://tradingmentor.onrender.com'; // Your backend URL base
+const API_URL = import.meta.env.VITE_BACK_URI;
 
 // Configure axios to send cookies
 axios.defaults.withCredentials = true;

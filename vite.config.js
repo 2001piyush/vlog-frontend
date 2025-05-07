@@ -5,14 +5,9 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: false,
+    sourcemap: false
   },
   server: {
-    proxy: {
-      '/api': {
-        target: 'https://tradingmentor.onrender.com',
-        changeOrigin: true,
-      },
-    },
-  },
+    port: 3000
+  }
 })
