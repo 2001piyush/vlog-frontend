@@ -48,14 +48,23 @@ export const getPublicBlockById = async (id) => {
 
 // --- Admin Auth API calls ---
 export const adminLogin = async (username, password) => {
-    try {
-        const response = await axios.post(`${API_URL}/admin/login`, { username, password });
-        return response.data;
-    } catch (error) {
-        console.error('Error during admin login:', error);
-        throw error;
-    }
+  try {
+    const response = await axios.post(`${API_URL}/admin/login`, 
+      { username, password },
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        withCredentials: true
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error('Login error:', error.response?.data);
+    throw error;
+  }
 };
+
 
 export const adminLogout = async () => {
     try {
