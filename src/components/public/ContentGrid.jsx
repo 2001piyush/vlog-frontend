@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentBlock from './ContentBlock'; // Adjust the path
-
+import './ContentGrid.css'; // Optional: Add your own styles
 function ContentGrid({ contentBlocksData }) { // Assume contentBlocksData is an array of block objects
 
     // Function to determine grid classes based on block.size
@@ -23,7 +23,7 @@ function ContentGrid({ contentBlocksData }) { // Assume contentBlocksData is an 
 
     return (
         // Use Bootstrap's row class to contain the columns
-        <div className="container-fluid px-4"> {/* Optional: Centers content and adds vertical margin */}
+        <div className="container-fluid px-4  "> {/* Optional: Centers content and adds vertical margin */}
             <div className="row">
                 {contentBlocksData.map(block => (
                     <ContentBlock 

@@ -45,7 +45,7 @@ function Banner() {
                 <img
                     src={currentImage.imageUrl}
                     alt={`Banner ${currentIndex + 1}`}
-                    className="d-block w-100"
+                    className="d-block w-100 "
                 />
             )}
         </div>

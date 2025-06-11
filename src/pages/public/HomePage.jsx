@@ -42,7 +42,7 @@ function HomePage() {
     );
 
     return (
-        <div className="home-page">
+        <div className="home-page transparent-bg">
             <Banner />
             <div className="content-section">
                 <div className="container">

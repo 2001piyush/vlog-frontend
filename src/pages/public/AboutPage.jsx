@@ -27,7 +27,7 @@ function AboutPage() {
     if (error) return <div className="container mt-4 text-danger">Error: {error}</div>; // Basic error message
 
     return (
-        <div className="container mt-4"> {/* Use Bootstrap container if not already in main */}
+        <div className="container mt-4 text-white"> {/* Use Bootstrap container if not already in main */}
             <h2 className="mb-3">{aboutContent.title}</h2> {/* Display the fetched title */}
             {/* Display the fetched content. Use dangerouslySetInnerHTML if content might contain HTML */}
             {/* <div dangerouslySetInnerHTML={{ __html: aboutContent.content }} /> */}

@@ -5,6 +5,17 @@ const API_URL = import.meta.env.VITE_BACK_URI;
 // Configure axios to send cookies with every request
 axios.defaults.withCredentials = true;
 
+export const registerUser = async (data) => {
+  try {
+    const response = await axios.post(
+      `${API_URL}/public/auth/register`,
+      data
+    );
+    return response.data;
+  } catch (error) {
+    throw error.response?.data || { message: "Registration failed" };
+  }
+};
 // --- Public API calls ---
 export const getPublicBanner = async () => {
     try {
@@ -48,23 +59,14 @@ export const getPublicBlockById = async (id) => {
 
 // --- Admin Auth API calls ---
 export const adminLogin = async (username, password) => {
-  try {
-    const response = await axios.post(`${API_URL}/admin/login`, 
-      { username, password },
-      {
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        withCredentials: true
-      }
-    );
-    return response.data;
-  } catch (error) {
-    console.error('Login error:', error.response?.data);
-    throw error;
-  }
+    try {
+        const response = await axios.post(`${API_URL}/admin/login`, { username, password });
+        return response.data;
+    } catch (error) {
+        console.error('Error during admin login:', error);
+        throw error;
+    }
 };
-
 
 export const adminLogout = async () => {
     try {
@@ -189,5 +191,18 @@ export const updateAdminAbout = async (aboutData) => {
     } catch (error) {
         console.error('Error updating admin about page:', error);
         throw error;
+    }
+};
+// public login
+export const userLogin = async (email, password) => {
+    try {
+        const response = await axios.post(
+            `${API_URL}/public/auth/login`,
+            { email, password }
+        );
+        return response.data;
+    } catch (error) {
+        console.error('Error during user login:', error);
+        throw error.response?.data || { message: "Login failed" };
     }
 };

@@ -9,7 +9,7 @@
 
 .section-title {
     text-align: center;
-    color: #2c3e50;
+    color: #c1cad3;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -62,4 +62,7 @@
 .content-section .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.transparent-bg {
+    background: transparent !important;
 }

@@ -39,3 +39,6 @@
 .footer .social-icon:focus {
   opacity: 0.9;
 }
+.footer{
+  background: linear-gradient(to right, #5d5a5a, #1e202171) !important;
+}
